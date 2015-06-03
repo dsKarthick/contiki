@@ -1,15 +1,20 @@
-[19:42:00 - main] [GUI.java:1325] [INFO] - > Starting Cooja
-[19:42:00 - main] [GUI.java:2846] [INFO] - External tools default settings: /external_tools_linux.config
-[19:42:00 - main] [GUI.java:2876] [INFO] - External tools user settings: /home/user/.cooja.user.properties
-[19:42:00 - main] [Simulation.java:423] [INFO] - Simulation random seed: 123456
-[19:42:00 - main] [MspMoteType.java:277] [WARN] - Old simulation config detected: SkyByteRadio was replaced by Msp802154Radio
-[19:42:00 - main] [CompileContiki.java:140] [INFO] - > make border-router.sky TARGET=sky 
-[19:42:01 - main] [MspMoteType.java:277] [WARN] - Old simulation config detected: SkyByteRadio was replaced by Msp802154Radio
-[19:42:01 - main] [CompileContiki.java:140] [INFO] - > make rest-server-example.sky TARGET=sky 
-[19:42:01 - main] [MspMote.java:232] [INFO] - Loading firmware from: /home/user/contiki/examples/ipv6/rpl-border-router/border-router.sky
-[19:42:01 - main] [MspMote.java:232] [INFO] - Loading firmware from: /home/user/contiki/examples/rest-example/rest-server-example.sky
-[19:42:01 - main] [MspMote.java:232] [INFO] - Loading firmware from: /home/user/contiki/examples/rest-example/rest-server-example.sky
-[19:42:02 - main] [SerialSocketServer.java:124] [INFO] - Listening on port: 60001
-[19:42:02 - main] [TimeLine.java:567] [INFO] - Zoom level: 25.49079397896416 microseconds/pixel 
-[19:42:11 - Thread-1] [SerialSocketServer.java:182] [INFO] - Forwarder: socket -> serial port
-[19:42:18 - Thread-2] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1433266938164
+[21:02:52 - main] [GUI.java:1325] [INFO] - > Starting Cooja
+[21:02:52 - main] [GUI.java:2846] [INFO] - External tools default settings: /external_tools_linux.config
+[21:02:52 - main] [GUI.java:2876] [INFO] - External tools user settings: /home/user/.cooja.user.properties
+[21:02:53 - main] [Simulation.java:423] [INFO] - Simulation random seed: 123456
+[21:02:53 - main] [MspMoteType.java:277] [WARN] - Old simulation config detected: SkyByteRadio was replaced by Msp802154Radio
+[21:02:53 - main] [CompileContiki.java:140] [INFO] - > make rest-server-example.sky TARGET=sky 
+[21:03:01 - main] [MspMoteType.java:277] [WARN] - Old simulation config detected: SkyByteRadio was replaced by Msp802154Radio
+[21:03:01 - main] [CompileContiki.java:140] [INFO] - > make border-router.sky TARGET=sky 
+[21:03:01 - main] [MspMoteType.java:277] [WARN] - Old simulation config detected: SkyByteRadio was replaced by Msp802154Radio
+[21:03:01 - main] [CompileContiki.java:140] [INFO] - > make coap-client-example.sky TARGET=sky 
+[21:03:01 - main] [MspMote.java:232] [INFO] - Loading firmware from: /home/user/contiki/examples/ipv6/rpl-border-router/border-router.sky
+[21:03:01 - main] [MspMote.java:232] [INFO] - Loading firmware from: /home/user/contiki/examples/rest-example-levi/rest-server-example.sky
+[21:03:01 - main] [MspMote.java:232] [INFO] - Loading firmware from: /home/user/contiki/examples/rest-example-levi/rest-server-example.sky
+[21:03:01 - main] [MspMote.java:232] [INFO] - Loading firmware from: /home/user/contiki/examples/rest-example-levi/coap-client-example.sky
+[21:03:02 - main] [SerialSocketServer.java:124] [INFO] - Listening on port: 60001
+[21:03:02 - main] [TimeLine.java:567] [INFO] - Zoom level: 25.49079397896416 microseconds/pixel 
+[21:03:14 - Thread-1] [SerialSocketServer.java:182] [INFO] - Forwarder: socket -> serial port
+[21:03:16 - Thread-2] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1433358196297
+[21:03:22 - Thread-0] [SerialSocketServer.java:143] [FATAL] - Listening thread shut down: Socket closed
+[21:03:22 - Thread-2] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1433358202027	Duration: 5730 ms	Simulated time 30544 ms	Ratio 5.330541012216405

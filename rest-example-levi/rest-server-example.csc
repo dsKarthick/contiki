@@ -46,9 +46,9 @@
       se.sics.cooja.mspmote.SkyMoteType
       <identifier>skyweb</identifier>
       <description>Rest</description>
-      <source EXPORT="discard">[CONTIKI_DIR]/examples/rest-example/rest-server-example.c</source>
+      <source EXPORT="discard">[CONTIKI_DIR]/examples/rest-example-levi/rest-server-example.c</source>
       <commands EXPORT="discard">make rest-server-example.sky TARGET=sky</commands>
-      <firmware EXPORT="copy">[CONTIKI_DIR]/examples/rest-example/rest-server-example.sky</firmware>
+      <firmware EXPORT="copy">[CONTIKI_DIR]/examples/rest-example-levi/rest-server-example.sky</firmware>
       <moteinterface>se.sics.cooja.interfaces.Position</moteinterface>
       <moteinterface>se.sics.cooja.interfaces.RimeAddress</moteinterface>
       <moteinterface>se.sics.cooja.interfaces.IPAddress</moteinterface>
@@ -107,26 +107,12 @@
       </interface_config>
       <motetype_identifier>skyweb</motetype_identifier>
     </mote>
-    <mote>
-      <breakpoints />
-      <interface_config>
-        se.sics.cooja.interfaces.Position
-        <x>77.68359039801751</x>
-        <y>47.26544238238854</y>
-        <z>0.0</z>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>4</id>
-      </interface_config>
-      <motetype_identifier>skyweb</motetype_identifier>
-    </mote>
   </simulation>
   <plugin>
     se.sics.cooja.plugins.SimControl
-    <width>421</width>
-    <z>0</z>
-    <height>161</height>
+    <width>259</width>
+    <z>1</z>
+    <height>179</height>
     <location_x>0</location_x>
     <location_y>0</location_y>
   </plugin>
@@ -137,51 +123,45 @@
       <skin>se.sics.cooja.plugins.skins.UDGMVisualizerSkin</skin>
       <skin>se.sics.cooja.plugins.skins.MoteTypeVisualizerSkin</skin>
       <skin>se.sics.cooja.plugins.skins.AttributeVisualizerSkin</skin>
-      <skin>se.sics.cooja.plugins.skins.TrafficVisualizerSkin</skin>
-      <viewport>10.505309204322225 0.0 0.0 10.505309204322225 -254.89475921566978 -263.01191150973983</viewport>
+      <viewport>10.505309204322225 0.0 0.0 10.505309204322225 -249.89475921566975 -141.01191150973983</viewport>
     </plugin_config>
-    <width>545</width>
-    <z>3</z>
-    <height>326</height>
-    <location_x>737</location_x>
-    <location_y>233</location_y>
+    <width>819</width>
+    <z>5</z>
+    <height>563</height>
+    <location_x>35</location_x>
+    <location_y>306</location_y>
   </plugin>
   <plugin>
     se.sics.cooja.plugins.LogListener
     <plugin_config>
       <filter />
-      <formatted_time />
-      <coloring />
     </plugin_config>
-    <width>737</width>
-    <z>4</z>
+    <width>762</width>
+    <z>0</z>
     <height>326</height>
-    <location_x>1</location_x>
-    <location_y>234</location_y>
+    <location_x>36</location_x>
+    <location_y>296</location_y>
   </plugin>
   <plugin>
     se.sics.cooja.plugins.RadioLogger
     <plugin_config>
-      <split>167</split>
-      <formatted_time />
-      <showdups>false</showdups>
-      <hidenodests>false</hidenodests>
+      <split>150</split>
       <analyzers name="6lowpan" />
     </plugin_config>
-    <width>858</width>
-    <z>1</z>
-    <height>232</height>
-    <location_x>422</location_x>
-    <location_y>0</location_y>
+    <width>815</width>
+    <z>4</z>
+    <height>385</height>
+    <location_x>255</location_x>
+    <location_y>8</location_y>
   </plugin>
   <plugin>
     SerialSocketServer
     <mote_arg>0</mote_arg>
     <width>422</width>
-    <z>2</z>
+    <z>3</z>
     <height>74</height>
-    <location_x>1</location_x>
-    <location_y>160</location_y>
+    <location_x>1234</location_x>
+    <location_y>93</location_y>
   </plugin>
   <plugin>
     se.sics.cooja.plugins.TimeLine
@@ -192,13 +172,14 @@
       <showRadioHW />
       <showLEDs />
       <showWatchpoints />
+      <split>125</split>
       <zoomfactor>25.49079397896416</zoomfactor>
     </plugin_config>
     <width>1624</width>
-    <z>5</z>
-    <height>162</height>
-    <location_x>2</location_x>
-    <location_y>561</location_y>
+    <z>2</z>
+    <height>252</height>
+    <location_x>166</location_x>
+    <location_y>699</location_y>
   </plugin>
 </simconf>
 

@@ -53,7 +53,11 @@ PROCESS_THREAD(rest_server_example, ev, data)
 {
   PROCESS_BEGIN();
 
+#ifdef WITH_COAP
+  PRINTF("COAP Server\n");
+#else
   PRINTF("HTTP Server\n");
+#endif
 
   rest_init();
 
