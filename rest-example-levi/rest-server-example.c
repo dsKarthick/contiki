@@ -1,4 +1,3 @@
-//#include <mysql.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -34,16 +33,6 @@ status_handler(REQUEST* request, RESPONSE* response)
   rest_set_header_content_type(response, TEXT_PLAIN);
   rest_set_response_payload(response, (uint8_t*)temp, strlen(temp));
 }
-
-
-// void
-// status_handler(REQUEST* request, RESPONSE* response)
-// {
-//   sprintf(temp,"MySQL client version: %s\n", mysql_get_client_info());
-
-//   rest_set_header_content_type(response, TEXT_PLAIN);
-//   rest_set_response_payload(response, (uint8_t*)temp, strlen(temp));
-// }
 
 
 PROCESS(rest_server_example, "Rest Server Example");
