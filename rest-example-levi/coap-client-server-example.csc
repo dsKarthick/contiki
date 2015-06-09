@@ -41,7 +41,7 @@
       <moteinterface>se.sics.cooja.mspmote.interfaces.SkyLED</moteinterface>
       <moteinterface>se.sics.cooja.mspmote.interfaces.MspDebugOutput</moteinterface>
       <moteinterface>se.sics.cooja.mspmote.interfaces.SkyTemperature</moteinterface>
-    </motetype>    
+    </motetype>
     <motetype>
       se.sics.cooja.mspmote.SkyMoteType
       <identifier>rplroot</identifier>
@@ -87,13 +87,13 @@
       <moteinterface>se.sics.cooja.mspmote.interfaces.SkyLED</moteinterface>
       <moteinterface>se.sics.cooja.mspmote.interfaces.MspDebugOutput</moteinterface>
       <moteinterface>se.sics.cooja.mspmote.interfaces.SkyTemperature</moteinterface>
-    </motetype>    
+    </motetype>
     <mote>
       <breakpoints />
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>33.260163187353555</x>
-        <y>30.643217359962595</y>
+        <x>40.3505266690547</x>
+        <y>32.460911418907735</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -106,8 +106,8 @@
       <breakpoints />
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>62.239287566073514</x>
-        <y>34.43810269527116</y>
+        <x>38.922677216148685</x>
+        <y>42.45585758924983</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -120,8 +120,8 @@
       <breakpoints />
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>47.68359039801751</x>
-        <y>47.26544238238854</y>
+        <x>47.6801538606389</x>
+        <y>45.12117656800772</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -134,21 +134,35 @@
       <breakpoints />
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>49.41583327244326</x>
-        <y>32.00647916206431</y>
+        <x>56.15206061454792</x>
+        <y>43.4077572245205</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
         <id>4</id>
       </interface_config>
+      <motetype_identifier>sky_server</motetype_identifier>
+    </mote>
+    <mote>
+      <breakpoints />
+      <interface_config>
+        se.sics.cooja.interfaces.Position
+        <x>54.41583327244326</x>
+        <y>30.00647916206431</y>
+        <z>0.0</z>
+      </interface_config>
+      <interface_config>
+        se.sics.cooja.mspmote.interfaces.MspMoteID
+        <id>5</id>
+      </interface_config>
       <motetype_identifier>sky_client</motetype_identifier>
-    </mote>    
+    </mote>
   </simulation>
   <plugin>
     se.sics.cooja.plugins.SimControl
     <width>421</width>
-    <z>0</z>
+    <z>1</z>
     <height>161</height>
     <location_x>0</location_x>
     <location_y>0</location_y>
@@ -164,7 +178,7 @@
       <viewport>10.505309204322225 0.0 0.0 10.505309204322225 -254.89475921566978 -263.01191150973983</viewport>
     </plugin_config>
     <width>545</width>
-    <z>3</z>
+    <z>0</z>
     <height>326</height>
     <location_x>737</location_x>
     <location_y>233</location_y>
@@ -192,7 +206,7 @@
       <analyzers name="6lowpan" />
     </plugin_config>
     <width>858</width>
-    <z>1</z>
+    <z>2</z>
     <height>232</height>
     <location_x>422</location_x>
     <location_y>0</location_y>
@@ -201,7 +215,7 @@
     SerialSocketServer
     <mote_arg>0</mote_arg>
     <width>422</width>
-    <z>2</z>
+    <z>3</z>
     <height>74</height>
     <location_x>1</location_x>
     <location_y>160</location_y>

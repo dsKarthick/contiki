@@ -18,14 +18,14 @@
 #define PRINTLLADDR(addr)
 #endif
 
-//#define SERVER_NODE(ipaddr)   uip_ip6addr(ipaddr, 0xff01, 0, 0, 0, 0, 0, 0, 0x0001)
-#define SERVER_NODE(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0x0212, 0x7402, 0x0002, 0x0202)
+#define SERVER_NODE(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303) /* cooja2 */
+
 #define LOCAL_PORT 61617
 #define REMOTE_PORT 61616
 
 char temp[100];
 int xact_id;
-static uip_ipaddr_t server_ipaddr;
+static uip_ipaddr_t server_ipaddr;  
 static struct uip_udp_conn *client_conn;
 static struct etimer et;
 #define MAX_PAYLOAD_LEN   100
