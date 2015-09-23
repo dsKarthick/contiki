@@ -5,6 +5,8 @@
 #include "contiki-net.h"
 #include "rest.h"
 
+// Este sera el nodo que detecta si el aparcamiento esta libre o no
+
 #define DEBUG 1
 #if DEBUG
 #include <stdio.h>

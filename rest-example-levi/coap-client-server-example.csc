@@ -106,22 +106,22 @@
       <breakpoints />
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>38.922677216148685</x>
-        <y>42.45585758924983</y>
+        <x>54.41583327244326</x>
+        <y>30.00647916206431</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
         <id>2</id>
       </interface_config>
-      <motetype_identifier>sky_server</motetype_identifier>
+      <motetype_identifier>sky_client</motetype_identifier>
     </mote>
     <mote>
       <breakpoints />
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>47.6801538606389</x>
-        <y>45.12117656800772</y>
+        <x>38.922677216148685</x>
+        <y>42.45585758924983</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -143,20 +143,6 @@
         <id>4</id>
       </interface_config>
       <motetype_identifier>sky_server</motetype_identifier>
-    </mote>
-    <mote>
-      <breakpoints />
-      <interface_config>
-        se.sics.cooja.interfaces.Position
-        <x>54.41583327244326</x>
-        <y>30.00647916206431</y>
-        <z>0.0</z>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>5</id>
-      </interface_config>
-      <motetype_identifier>sky_client</motetype_identifier>
     </mote>
   </simulation>
   <plugin>

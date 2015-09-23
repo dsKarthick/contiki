@@ -6,6 +6,8 @@
 #include "rest.h"
 #include "buffer.h"
 
+// Este sera el nodo recolector encargado de guardar los datos que recive
+
 #define DEBUG 1
 #if DEBUG
 #include <stdio.h>
@@ -18,7 +20,8 @@
 #define PRINTLLADDR(addr)
 #endif
 
-#define SERVER_NODE(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303) /* cooja2 */
+// Esta será la IP del servidor, coincide con el id de la mota
+#define SERVER_NODE(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303)
 
 #define LOCAL_PORT 61617
 #define REMOTE_PORT 61616
