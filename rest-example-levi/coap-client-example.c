@@ -6,7 +6,7 @@
 #include "rest.h"
 #include "buffer.h"
 
-// Este sera el nodo recolector encargado de guardar los datos que recive
+// Este sera el nodo recolector encargado de guardar los datos que recibe
 
 #define DEBUG 1
 #if DEBUG
@@ -20,16 +20,15 @@
 #define PRINTLLADDR(addr)
 #endif
 
-// Esta será la IP del servidor, coincide con el id de la mota
-#define SERVER_NODE(ipaddr)   uip_ip6addr(ipaddr, 0xfe80, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303)
-
 #define LOCAL_PORT 61617
 #define REMOTE_PORT 61616
 
 char temp[100];
 int xact_id;
-static uip_ipaddr_t server_ipaddr;  
-static struct uip_udp_conn *client_conn;
+
+static uip_ipaddr_t server_ips[3];
+static struct uip_udp_conn* client_connections[3];
+
 static struct etimer et;
 #define MAX_PAYLOAD_LEN   100
 
@@ -52,7 +51,7 @@ response_handler(coap_packet_t* response)
 }
 
 static void
-send_data(void)
+send_data(struct uip_udp_conn* client_conn)
 {
   char buf[MAX_PAYLOAD_LEN];
 
@@ -72,6 +71,7 @@ send_data(void)
     PRINTF("Client sending request to:[");
     PRINT6ADDR(&client_conn->ripaddr);
     PRINTF("]:%u/%s\n", (uint16_t)REMOTE_PORT, service_urls[service_id]);
+
     uip_udp_packet_send(client_conn, buf, data_size);
 
     delete_buffer();
@@ -101,27 +101,34 @@ PROCESS_THREAD(coap_client_example, ev, data)
 {
   PROCESS_BEGIN();
 
-  SERVER_NODE(&server_ipaddr);
+  uip_ip6addr(&server_ips[0], 0xfe80, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303);
+  uip_ip6addr(&server_ips[1], 0xfe80, 0, 0, 0, 0x0212, 0x7404, 0x0004, 0x0404);
+  uip_ip6addr(&server_ips[2], 0xfe80, 0, 0, 0, 0x0212, 0x7405, 0x0005, 0x0505);
 
-  /* new connection with server */
-  client_conn = udp_new(&server_ipaddr, UIP_HTONS(REMOTE_PORT), NULL);
-  udp_bind(client_conn, UIP_HTONS(LOCAL_PORT));
+  int iter;
+  for (iter = 0; iter < 3; iter++)
+  {
+    /* new connections with server */
+    client_connections[iter] = udp_new(&server_ips[iter], UIP_HTONS(REMOTE_PORT), NULL);
+    udp_bind(client_connections[iter], UIP_HTONS(LOCAL_PORT));
+  }
 
-  PRINTF("Created a connection with the server ");
-  PRINT6ADDR(&client_conn->ripaddr);
-  PRINTF(" local/remote port %u/%u\n",
-  UIP_HTONS(client_conn->lport), UIP_HTONS(client_conn->rport));
-
-  //etimer_set(&et, CLOCK_SECOND * 4 + random_rand() % (CLOCK_SECOND * 4));
-  etimer_set(&et, 50 * CLOCK_SECOND);
+  etimer_set(&et, 15 * CLOCK_SECOND);
   while(1) {
     PROCESS_YIELD();
     if (etimer_expired(&et)) {
-      send_data();
+      PRINTF("Estamos enviando\n");
+      for (iter = 0; iter < 3; iter++) {
+        send_data(client_connections[iter]);
+      }
+
       etimer_reset(&et);
-    } else if (ev == tcpip_event) {
-      handle_incoming_data();
     }
+    // else {
+    //   if (ev == tcpip_event) {
+    //     handle_incoming_data();
+    //   }
+    // }
   }
 
   PROCESS_END();

@@ -30,7 +30,8 @@ RESOURCE(status, METHOD_GET, "status");
 void
 status_handler(REQUEST* request, RESPONSE* response)
 {
-  sprintf(temp,"status!!!\n");
+	PRINTF("Dentro de status\n");
+	sprintf(temp,"status %i!!!\n", (random_rand()));
 
   rest_set_header_content_type(response, TEXT_PLAIN);
   rest_set_response_payload(response, (uint8_t*)temp, strlen(temp));
