@@ -72,10 +72,10 @@ PROCESS_THREAD(loop_client, ev, data)
   uip_ip6addr(&server_ipaddrs[4], 0xaaaa, 0, 0, 0, 0x0212, 0x7407, 0x0007, 0x0707);
   uip_ip6addr(&server_ipaddrs[5], 0xaaaa, 0, 0, 0, 0x0212, 0x7408, 0x0008, 0x0808);
 
-  etimer_set(&et, CLOCK_CONF_SECOND/16);
+  etimer_set(&et, 15*CLOCK_SECOND);
 
   while(1) {
-    PROCESS_YIELD();
+    PROCESS_WAIT_EVENT_UNTIL(ev == PROCESS_EVENT_TIMER);
 
     process_post(&coap_client_example, event_data_ready, &server_ipaddrs[count % SERVERS_NUMBER]);
 
