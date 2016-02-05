@@ -50,7 +50,7 @@ void client_chunk_handler(void *response)
   const uint8_t *chunk;
 
   int len = coap_get_payload(response, &chunk);
-  printf("|%.*s", len, (char *)chunk);
+  printf("|%.*s\n", len, (char *)chunk);
 }
 
 PROCESS(loop_client, "Lopp for the Client");
@@ -77,7 +77,6 @@ PROCESS_THREAD(loop_client, ev, data)
   while(1) {
     PROCESS_YIELD();
 
-    PRINT6ADDR(&server_ipaddrs[count % SERVERS_NUMBER]);
     process_post(&coap_client_example, event_data_ready, &server_ipaddrs[count % SERVERS_NUMBER]);
 
     count ++;
@@ -103,14 +102,10 @@ PROCESS_THREAD(coap_client_example, ev, server_ipaddr)
     coap_init_message(request, COAP_TYPE_CON, COAP_GET, 0 );
     coap_set_header_uri_path(request, service_urls[0]);
 
-    PRINTF("--Requesting %s--\n", service_urls[0]);
-
     PRINT6ADDR(server_ipaddr);
     PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));
 
     COAP_BLOCKING_REQUEST(server_ipaddr, REMOTE_PORT, request, client_chunk_handler);
-
-    PRINTF("\n--Done--\n");
   }
 
   PROCESS_END();

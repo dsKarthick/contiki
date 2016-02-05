@@ -205,10 +205,10 @@
   <plugin>
     se.sics.cooja.plugins.SimControl
     <width>306</width>
-    <z>1</z>
-    <height>169</height>
-    <location_x>763</location_x>
-    <location_y>-1</location_y>
+    <z>2</z>
+    <height>153</height>
+    <location_x>764</location_x>
+    <location_y>0</location_y>
   </plugin>
   <plugin>
     se.sics.cooja.plugins.Visualizer
@@ -234,7 +234,7 @@
       <coloring />
     </plugin_config>
     <width>762</width>
-    <z>2</z>
+    <z>4</z>
     <height>441</height>
     <location_x>2</location_x>
     <location_y>232</location_y>
@@ -256,6 +256,15 @@
     <minimized>true</minimized>
   </plugin>
   <plugin>
+    SerialSocketServer
+    <mote_arg>0</mote_arg>
+    <width>422</width>
+    <z>3</z>
+    <height>74</height>
+    <location_x>764</location_x>
+    <location_y>156</location_y>
+  </plugin>
+  <plugin>
     se.sics.cooja.plugins.MoteInterfaceViewer
     <mote_arg>1</mote_arg>
     <plugin_config>
@@ -263,9 +272,10 @@
       <scrollpos>0,0</scrollpos>
     </plugin_config>
     <width>853</width>
-    <z>3</z>
+    <z>1</z>
     <height>441</height>
     <location_x>765</location_x>
     <location_y>232</location_y>
   </plugin>
 </simconf>
+
