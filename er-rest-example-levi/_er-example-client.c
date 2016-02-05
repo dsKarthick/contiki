@@ -32,20 +32,25 @@
 #define PRINTLLADDR(addr)
 #endif
 
+/* TODO: This server address is hard-coded for Cooja. */
+#define SERVER_NODE(ipaddr)   uip_ip6addr(ipaddr, 0xaaaa, 0, 0, 0, 0x0212, 0x7402, 0x0002, 0x0202) /* cooja2 */
+
 #define LOCAL_PORT      UIP_HTONS(COAP_DEFAULT_PORT+1)
 #define REMOTE_PORT     UIP_HTONS(COAP_DEFAULT_PORT)
 
-#define SERVERS_NUMBER 6
-#define NUMBER_OF_URLS 1
+#define TOGGLE_INTERVAL 45
 
-static uip_ipaddr_t server_ipaddrs[SERVERS_NUMBER];
+static uip_ipaddr_t server_ipaddrs[3];
 static struct etimer et;
-static process_event_t event_data_ready;
 
+/* Example URIs that can be queried. */
+#define NUMBER_OF_URLS 1
+/* leading and ending slashes only for demo purposes, get cropped automatically when setting the Uri-Path */
 char* service_urls[NUMBER_OF_URLS] = {"status"};
 
 /* This function is will be passed to COAP_BLOCKING_REQUEST() to handle responses. */
-void client_chunk_handler(void *response)
+void
+client_chunk_handler(void *response)
 {
   const uint8_t *chunk;
 
@@ -53,64 +58,51 @@ void client_chunk_handler(void *response)
   printf("|%.*s", len, (char *)chunk);
 }
 
-PROCESS(loop_client, "Lopp for the Client");
 PROCESS(coap_client_example, "COAP Client Example");
+AUTOSTART_PROCESSES(&coap_client_example);
 
-AUTOSTART_PROCESSES(&loop_client, &coap_client_example);
-
-PROCESS_THREAD(loop_client, ev, data)
+PROCESS_THREAD(coap_client_example, ev, data)
 {
-  static int count = 0;
   PROCESS_BEGIN();
 
-  event_data_ready = process_alloc_event();
+  static coap_packet_t requests[3][1]; /* This way the packet can be treated as pointer as usual. */
 
   uip_ip6addr(&server_ipaddrs[0], 0xaaaa, 0, 0, 0, 0x0212, 0x7403, 0x0003, 0x0303);
   uip_ip6addr(&server_ipaddrs[1], 0xaaaa, 0, 0, 0, 0x0212, 0x7404, 0x0004, 0x0404);
   uip_ip6addr(&server_ipaddrs[2], 0xaaaa, 0, 0, 0, 0x0212, 0x7405, 0x0005, 0x0505);
-  uip_ip6addr(&server_ipaddrs[3], 0xaaaa, 0, 0, 0, 0x0212, 0x7406, 0x0006, 0x0606);
-  uip_ip6addr(&server_ipaddrs[4], 0xaaaa, 0, 0, 0, 0x0212, 0x7407, 0x0007, 0x0707);
-  uip_ip6addr(&server_ipaddrs[5], 0xaaaa, 0, 0, 0, 0x0212, 0x7408, 0x0008, 0x0808);
-
-  etimer_set(&et, CLOCK_CONF_SECOND/16);
-
-  while(1) {
-    PROCESS_YIELD();
-
-    PRINT6ADDR(&server_ipaddrs[count % SERVERS_NUMBER]);
-    process_post(&coap_client_example, event_data_ready, &server_ipaddrs[count % SERVERS_NUMBER]);
-
-    count ++;
-    etimer_reset(&et);
-  }
-
-  PROCESS_END();
-}
-
-PROCESS_THREAD(coap_client_example, ev, server_ipaddr)
-{
-  PROCESS_BEGIN();
-
-  static coap_packet_t request[1]; /* This way the packet can be treated as pointer as usual. */
 
   /* receives all CoAP messages */
   coap_receiver_init();
 
+  etimer_set(&et, TOGGLE_INTERVAL * CLOCK_SECOND);
+
   while(1) {
-    PROCESS_WAIT_EVENT_UNTIL(ev == event_data_ready);
+    PROCESS_YIELD();
 
-    /* prepare request, TID is set by COAP_BLOCKING_REQUEST() */
-    coap_init_message(request, COAP_TYPE_CON, COAP_GET, 0 );
-    coap_set_header_uri_path(request, service_urls[0]);
+    if (etimer_expired(&et)) {
 
-    PRINTF("--Requesting %s--\n", service_urls[0]);
+      //Este bucle no funciona, solo se haceuna vez
+      static int iter;
+      for (iter = 0; iter < 3; iter = iter + 1)
+      {
+        /* prepare request, TID is set by COAP_BLOCKING_REQUEST() */
+        coap_init_message(requests[iter], COAP_TYPE_CON, COAP_GET, 0 );
+        coap_set_header_uri_path(requests[iter], service_urls[0]);
 
-    PRINT6ADDR(server_ipaddr);
-    PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));
+        printf("--Requesting %s--\n", service_urls[0]);
 
-    COAP_BLOCKING_REQUEST(server_ipaddr, REMOTE_PORT, request, client_chunk_handler);
+        /* new connections with server */
+        PRINTF("Direccion %i\n", iter);
+        PRINT6ADDR(&server_ipaddrs[iter]);
+        PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));
 
-    PRINTF("\n--Done--\n");
+        COAP_BLOCKING_REQUEST(&server_ipaddrs[iter], REMOTE_PORT, requests[iter], client_chunk_handler);
+
+        printf("\n--Done--\n");
+      }
+
+      etimer_reset(&et);
+    }
   }
 
   PROCESS_END();
