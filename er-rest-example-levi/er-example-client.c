@@ -35,7 +35,7 @@
 #define LOCAL_PORT      UIP_HTONS(COAP_DEFAULT_PORT+1)
 #define REMOTE_PORT     UIP_HTONS(COAP_DEFAULT_PORT)
 
-#define SERVERS_NUMBER 6
+#define SERVERS_NUMBER 13
 #define NUMBER_OF_URLS 1
 
 static uip_ipaddr_t server_ipaddrs[SERVERS_NUMBER];
@@ -71,6 +71,14 @@ PROCESS_THREAD(loop_client, ev, data)
   uip_ip6addr(&server_ipaddrs[3], 0xaaaa, 0, 0, 0, 0x0212, 0x7406, 0x0006, 0x0606);
   uip_ip6addr(&server_ipaddrs[4], 0xaaaa, 0, 0, 0, 0x0212, 0x7407, 0x0007, 0x0707);
   uip_ip6addr(&server_ipaddrs[5], 0xaaaa, 0, 0, 0, 0x0212, 0x7408, 0x0008, 0x0808);
+
+  uip_ip6addr(&server_ipaddrs[6], 0xaaaa, 0, 0, 0, 0x0212, 0x7409, 0x0009, 0x0909);
+  uip_ip6addr(&server_ipaddrs[7], 0xaaaa, 0, 0, 0, 0x0212, 0x740a, 0x000a, 0x0a0a);
+  uip_ip6addr(&server_ipaddrs[8], 0xaaaa, 0, 0, 0, 0x0212, 0x740b, 0x000b, 0x0b0b);
+  uip_ip6addr(&server_ipaddrs[9], 0xaaaa, 0, 0, 0, 0x0212, 0x740c, 0x000c, 0x0c0c);
+  uip_ip6addr(&server_ipaddrs[10], 0xaaaa, 0, 0, 0, 0x0212, 0x740d, 0x000d, 0x0d0d);
+  uip_ip6addr(&server_ipaddrs[11], 0xaaaa, 0, 0, 0, 0x0212, 0x740e, 0x000e, 0x0e0e);
+  uip_ip6addr(&server_ipaddrs[12], 0xaaaa, 0, 0, 0, 0x0212, 0x740f, 0x000f, 0x0f0f);
 
   etimer_set(&et, 15*CLOCK_SECOND);
 
