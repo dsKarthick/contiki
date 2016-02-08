@@ -1,4 +1,4 @@
-all: er-example-server er-example-client
+all: er-server er-client
 # use this target explicitly if requried: er-plugtest-server
 
 
@@ -14,7 +14,7 @@ UIP_CONF_IPV6=1
 # IPv6 make config disappeared completely
 CFLAGS += -DUIP_CONF_IPV6=1
 
-CONTIKI=../..
+CONTIKI=../../..
 CFLAGS += -DPROJECT_CONF_H=\"project-conf.h\"
 
 # variable for Makefile.include

@@ -54,7 +54,7 @@ void client_chunk_handler(void *response)
 }
 
 PROCESS(loop_client, "Lopp for the Client");
-PROCESS(coap_client_example, "COAP Client A");
+PROCESS(coap_client_example, "COAP Client");
 
 AUTOSTART_PROCESSES(&loop_client, &coap_client_example);
 

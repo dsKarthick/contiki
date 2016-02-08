@@ -24,9 +24,9 @@
       se.sics.cooja.mspmote.SkyMoteType
       <identifier>server</identifier>
       <description>Erbium Server</description>
-      <source EXPORT="discard">[CONTIKI_DIR]/examples/er-rest-example-levi/er-example-server.c</source>
-      <commands EXPORT="discard">make er-example-server.sky TARGET=sky</commands>
-      <firmware EXPORT="copy">[CONTIKI_DIR]/examples/er-rest-example-levi/er-example-server.sky</firmware>
+      <source EXPORT="discard">[CONTIKI_DIR]/examples/er-rest/1/er-server.c</source>
+      <commands EXPORT="discard">make er-server.sky TARGET=sky</commands>
+      <firmware EXPORT="copy">[CONTIKI_DIR]/examples/er-rest/1/er-server.sky</firmware>
       <moteinterface>se.sics.cooja.interfaces.Position</moteinterface>
       <moteinterface>se.sics.cooja.interfaces.RimeAddress</moteinterface>
       <moteinterface>se.sics.cooja.interfaces.IPAddress</moteinterface>
@@ -70,9 +70,9 @@
       se.sics.cooja.mspmote.SkyMoteType
       <identifier>client</identifier>
       <description>Erbium Client</description>
-      <source EXPORT="discard">[CONTIKI_DIR]/examples/er-rest-example-levi/er-example-client.c</source>
-      <commands EXPORT="discard">make er-example-client.sky TARGET=sky</commands>
-      <firmware EXPORT="copy">[CONTIKI_DIR]/examples/er-rest-example-levi/er-example-client.sky</firmware>
+      <source EXPORT="discard">[CONTIKI_DIR]/examples/er-rest/1/er-client.c</source>
+      <commands EXPORT="discard">make er-client.sky TARGET=sky</commands>
+      <firmware EXPORT="copy">[CONTIKI_DIR]/examples/er-rest/1/er-client.sky</firmware>
       <moteinterface>se.sics.cooja.interfaces.Position</moteinterface>
       <moteinterface>se.sics.cooja.interfaces.RimeAddress</moteinterface>
       <moteinterface>se.sics.cooja.interfaces.IPAddress</moteinterface>
