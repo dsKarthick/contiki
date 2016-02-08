@@ -35,7 +35,7 @@
 #define LOCAL_PORT      UIP_HTONS(COAP_DEFAULT_PORT+1)
 #define REMOTE_PORT     UIP_HTONS(COAP_DEFAULT_PORT)
 
-#define SERVERS_NUMBER 13
+#define SERVERS_NUMBER 24
 #define NUMBER_OF_URLS 1
 
 static uip_ipaddr_t server_ipaddrs[SERVERS_NUMBER];
@@ -54,7 +54,7 @@ void client_chunk_handler(void *response)
 }
 
 PROCESS(loop_client, "Lopp for the Client");
-PROCESS(coap_client_example, "COAP Client Example");
+PROCESS(coap_client_example, "COAP Client A");
 
 AUTOSTART_PROCESSES(&loop_client, &coap_client_example);
 
@@ -71,7 +71,6 @@ PROCESS_THREAD(loop_client, ev, data)
   uip_ip6addr(&server_ipaddrs[3], 0xaaaa, 0, 0, 0, 0x0212, 0x7406, 0x0006, 0x0606);
   uip_ip6addr(&server_ipaddrs[4], 0xaaaa, 0, 0, 0, 0x0212, 0x7407, 0x0007, 0x0707);
   uip_ip6addr(&server_ipaddrs[5], 0xaaaa, 0, 0, 0, 0x0212, 0x7408, 0x0008, 0x0808);
-
   uip_ip6addr(&server_ipaddrs[6], 0xaaaa, 0, 0, 0, 0x0212, 0x7409, 0x0009, 0x0909);
   uip_ip6addr(&server_ipaddrs[7], 0xaaaa, 0, 0, 0, 0x0212, 0x740a, 0x000a, 0x0a0a);
   uip_ip6addr(&server_ipaddrs[8], 0xaaaa, 0, 0, 0, 0x0212, 0x740b, 0x000b, 0x0b0b);
@@ -79,6 +78,18 @@ PROCESS_THREAD(loop_client, ev, data)
   uip_ip6addr(&server_ipaddrs[10], 0xaaaa, 0, 0, 0, 0x0212, 0x740d, 0x000d, 0x0d0d);
   uip_ip6addr(&server_ipaddrs[11], 0xaaaa, 0, 0, 0, 0x0212, 0x740e, 0x000e, 0x0e0e);
   uip_ip6addr(&server_ipaddrs[12], 0xaaaa, 0, 0, 0, 0x0212, 0x740f, 0x000f, 0x0f0f);
+
+  uip_ip6addr(&server_ipaddrs[13], 0xaaaa, 0, 0, 0, 0x0212, 0x7410, 0x0010, 0x1010);
+  uip_ip6addr(&server_ipaddrs[14], 0xaaaa, 0, 0, 0, 0x0212, 0x7411, 0x0011, 0x1111);
+  uip_ip6addr(&server_ipaddrs[15], 0xaaaa, 0, 0, 0, 0x0212, 0x7412, 0x0012, 0x1212);
+  uip_ip6addr(&server_ipaddrs[16], 0xaaaa, 0, 0, 0, 0x0212, 0x7413, 0x0013, 0x1313);
+  uip_ip6addr(&server_ipaddrs[17], 0xaaaa, 0, 0, 0, 0x0212, 0x7414, 0x0014, 0x1414);
+  uip_ip6addr(&server_ipaddrs[18], 0xaaaa, 0, 0, 0, 0x0212, 0x7415, 0x0015, 0x1515);
+  uip_ip6addr(&server_ipaddrs[19], 0xaaaa, 0, 0, 0, 0x0212, 0x7416, 0x0016, 0x1617);
+  uip_ip6addr(&server_ipaddrs[20], 0xaaaa, 0, 0, 0, 0x0212, 0x7417, 0x0017, 0x1717);
+  uip_ip6addr(&server_ipaddrs[21], 0xaaaa, 0, 0, 0, 0x0212, 0x7418, 0x0018, 0x1818);
+  uip_ip6addr(&server_ipaddrs[22], 0xaaaa, 0, 0, 0, 0x0212, 0x7419, 0x0019, 0x1919);
+  uip_ip6addr(&server_ipaddrs[23], 0xaaaa, 0, 0, 0, 0x0212, 0x741a, 0x001a, 0x1a1a);
 
   etimer_set(&et, 15*CLOCK_SECOND);
 
