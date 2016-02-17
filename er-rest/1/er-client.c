@@ -24,7 +24,7 @@
 #define DEBUG 1
 #if DEBUG
 #define PRINTF(...) printf(__VA_ARGS__)
-#define PRINT6ADDR(addr) PRINTF("[%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x]", ((uint8_t *)addr)[0], ((uint8_t *)addr)[1], ((uint8_t *)addr)[2], ((uint8_t *)addr)[3], ((uint8_t *)addr)[4], ((uint8_t *)addr)[5], ((uint8_t *)addr)[6], ((uint8_t *)addr)[7], ((uint8_t *)addr)[8], ((uint8_t *)addr)[9], ((uint8_t *)addr)[10], ((uint8_t *)addr)[11], ((uint8_t *)addr)[12], ((uint8_t *)addr)[13], ((uint8_t *)addr)[14], ((uint8_t *)addr)[15])
+#define PRINT6ADDR(addr) PRINTF("%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x:%02x%02x", ((uint8_t *)addr)[0], ((uint8_t *)addr)[1], ((uint8_t *)addr)[2], ((uint8_t *)addr)[3], ((uint8_t *)addr)[4], ((uint8_t *)addr)[5], ((uint8_t *)addr)[6], ((uint8_t *)addr)[7], ((uint8_t *)addr)[8], ((uint8_t *)addr)[9], ((uint8_t *)addr)[10], ((uint8_t *)addr)[11], ((uint8_t *)addr)[12], ((uint8_t *)addr)[13], ((uint8_t *)addr)[14], ((uint8_t *)addr)[15])
 #define PRINTLLADDR(lladdr) PRINTF("[%02x:%02x:%02x:%02x:%02x:%02x]",(lladdr)->addr[0], (lladdr)->addr[1], (lladdr)->addr[2], (lladdr)->addr[3],(lladdr)->addr[4], (lladdr)->addr[5])
 #else
 #define PRINTF(...)
@@ -50,7 +50,8 @@ void client_chunk_handler(void *response)
   const uint8_t *chunk;
 
   int len = coap_get_payload(response, &chunk);
-  printf("|%.*s\n", len, (char *)chunk);
+  //printf("|%.*s\n", len, (char *)chunk);
+  PRINTF("%.*s", len, (char *)chunk);
 }
 
 PROCESS(loop_client, "Lopp for the Client");
@@ -121,8 +122,11 @@ PROCESS_THREAD(coap_client_example, ev, server_ipaddr)
     coap_init_message(request, COAP_TYPE_CON, COAP_GET, 0 );
     coap_set_header_uri_path(request, service_urls[0]);
 
+
+    PRINTF("\nINFO");
+    PRINTF("|");
     PRINT6ADDR(server_ipaddr);
-    PRINTF(" : %u\n", UIP_HTONS(REMOTE_PORT));
+    PRINTF("|");
 
     COAP_BLOCKING_REQUEST(server_ipaddr, REMOTE_PORT, request, client_chunk_handler);
   }
