@@ -757,7 +757,7 @@ status_handler(void* request, void* response, uint8_t *buffer, uint16_t preferre
 
   const char *len = NULL;
   /* Some data that has the length up to REST_MAX_CHUNK_SIZE. For more, see the chunk resource. */
-  char const * const message = "{'status':1}";
+  char const * const message = "status=1";
   int length = 12; /*           |<-------->| */
 
   /* The query string can be retrieved by rest_get_query() or parsed for its key-value pairs. */

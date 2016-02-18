@@ -484,7 +484,7 @@
       <filter />
       <formatted_time />
       <coloring />
-      <append>[CONTIKI_DIR]/examples/er-rest/1/client.log</append>
+      <append>[CONTIKI_DIR]/examples/er-rest/client1.log</append>
     </plugin_config>
     <width>762</width>
     <z>1</z>
