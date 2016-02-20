@@ -6,10 +6,10 @@ $query
 EOF
 }
 
-LOG_FILE="/home/user/contiki/examples/er-rest/client*"
+LOG_FILES="/home/user/contiki/examples/er-rest/client*"
 
 # leemos el archivo en tiempo real
-tail -f $LOG_FILE | \
+tail -f $LOG_FILES | \
 while read line ; do
   # buscamos la linea que contiene INFO|
   echo "$line" | grep "INFO|"
