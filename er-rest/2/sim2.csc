@@ -509,15 +509,6 @@
     <minimized>true</minimized>
   </plugin>
   <plugin>
-    SerialSocketServer
-    <mote_arg>0</mote_arg>
-    <width>422</width>
-    <z>2</z>
-    <height>74</height>
-    <location_x>764</location_x>
-    <location_y>156</location_y>
-  </plugin>
-  <plugin>
     se.sics.cooja.plugins.MoteInterfaceViewer
     <mote_arg>1</mote_arg>
     <plugin_config>
