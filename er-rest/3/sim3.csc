@@ -521,5 +521,51 @@
     <location_x>765</location_x>
     <location_y>232</location_y>
   </plugin>
+  <plugin>
+    se.sics.cooja.plugins.ScriptRunner
+    <plugin_config>
+      <script>
+        TIMEOUT(2000000); //in ms
+
+
+        /* Conf. */
+        booted = new Array();
+        nrNodes = 26;
+        nodes_starting = true;
+
+        for(i = 1; i &lt;= nrNodes; i++) {
+          booted[i] = false;
+        }
+
+        /* Wait until all nodes have started */
+        while(nodes_starting) {
+          YIELD_THEN_WAIT_UNTIL(msg.startsWith('Star'));
+
+          booted[id] = true;
+
+          for(i = 1; i &lt;= nrNodes; i++) {
+            if(!booted[i]) {
+              break;
+            }
+            if(i == nrNodes) {
+              nodes_starting = false;
+            }
+          }
+        }
+
+        while(true) {
+          YIELD();
+          log.log(msg + "\n");
+        }
+      </script>
+      <active>true</active>
+    </plugin_config>
+    <width>600</width>
+    <z>2</z>
+    <height>385</height>
+    <location_x>266</location_x>
+    <location_y>0</location_y>
+    <minimized>false</minimized>
+  </plugin>
 </simconf>
 
