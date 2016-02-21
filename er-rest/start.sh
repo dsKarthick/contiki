@@ -1,5 +1,5 @@
 #!/bin/bash
-GUI=1
+GUI=0
 
 LOG_FILES="/home/user/contiki/examples/er-rest/client*"
 
@@ -23,6 +23,7 @@ $cmd_clean &
 
 if [ $GUI -eq 1 ]; then
   $cmd_make1 &
+  sleep 5
 else
   if [ -f "COOJA.log" ]; then
     rm COOJA.log
@@ -32,14 +33,12 @@ else
   fi
 
   $cmd_make1_nogui &
-  sleep 20
+  sleep 10
 
   if [ -f "COOJA.testlog" ]; then
     mv COOJA.testlog "/home/user/contiki/examples/er-rest/client1.log"
   fi
 fi
-
-sleep 5
 
 echo "conectando router"
 $cmd_connect &
@@ -53,6 +52,7 @@ $cmd_clean &
 
 if [ $GUI -eq 1 ]; then
   $cmd_make2 &
+  sleep 5
 else
   if [ -f "COOJA.log" ]; then
     rm COOJA.log
@@ -62,14 +62,12 @@ else
   fi
 
   $cmd_make2_nogui &
-  sleep 20
+  sleep 15
 
   if [ -f "COOJA.testlog" ]; then
     mv COOJA.testlog "/home/user/contiki/examples/er-rest/client2.log"
   fi
 fi
-
-sleep 5
 
 # inicilizar la simulacion 3
 echo "inicilizando la simulacion 3"
@@ -78,6 +76,7 @@ $cmd_clean &
 
 if [ $GUI -eq 1 ]; then
   $cmd_make3 &
+  sleep 5
 else
   if [ -f "COOJA.log" ]; then
     rm COOJA.log
