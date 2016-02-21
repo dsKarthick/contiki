@@ -534,7 +534,7 @@
     se.sics.cooja.plugins.ScriptRunner
     <plugin_config>
       <script>
-        TIMEOUT(2000000); //in ms
+        TIMEOUT(14400000); //in ms
 
 
         /* Conf. */
