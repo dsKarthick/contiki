@@ -99,7 +99,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>31</id>
+        <id>61</id>
       </interface_config>
       <motetype_identifier>rplroot</motetype_identifier>
     </mote>
@@ -113,7 +113,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>32</id>
+        <id>62</id>
       </interface_config>
       <motetype_identifier>client</motetype_identifier>
     </mote>
@@ -127,7 +127,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>33</id>
+        <id>63</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -141,7 +141,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>34</id>
+        <id>64</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -155,7 +155,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>35</id>
+        <id>65</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -169,7 +169,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>36</id>
+        <id>66</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -183,7 +183,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>37</id>
+        <id>67</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -197,7 +197,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>38</id>
+        <id>68</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -211,7 +211,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>39</id>
+        <id>69</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -225,7 +225,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>40</id>
+        <id>70</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -239,7 +239,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>41</id>
+        <id>71</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -253,7 +253,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>42</id>
+        <id>72</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -267,7 +267,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>43</id>
+        <id>73</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -281,7 +281,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>44</id>
+        <id>74</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -295,7 +295,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>45</id>
+        <id>75</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -309,7 +309,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>46</id>
+        <id>76</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -323,7 +323,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>47</id>
+        <id>77</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -337,7 +337,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>48</id>
+        <id>78</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -351,7 +351,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>49</id>
+        <id>79</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -365,7 +365,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>50</id>
+        <id>80</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -379,7 +379,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>51</id>
+        <id>81</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -393,7 +393,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>52</id>
+        <id>82</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -407,7 +407,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>53</id>
+        <id>83</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -421,7 +421,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>54</id>
+        <id>84</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -435,7 +435,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>55</id>
+        <id>85</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -449,7 +449,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>56</id>
+        <id>86</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
