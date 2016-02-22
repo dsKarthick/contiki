@@ -1,10 +1,18 @@
 #!/bin/bash
 
+function init_db {
+mysql --user=root --password=user parking << EOF
+source /home/user/contiki/examples/er-rest/database.sql;
+EOF
+}
+
 function exec_query {
 mysql --user=root --password=user parking << EOF
 $query
 EOF
 }
+
+$(init_db)
 
 LOG_FILES="/home/user/contiki/examples/er-rest/client*"
 

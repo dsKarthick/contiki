@@ -758,7 +758,7 @@ status_handler(void* request, void* response, uint8_t *buffer, uint16_t preferre
   const char *len = NULL;
   /* Some data that has the length up to REST_MAX_CHUNK_SIZE. For more, see the chunk resource. */
   char * status;
-  if ((random_rand() % 10) == 0){
+  if ((random_rand() % 20) == 0){
     status = "status=1";
   } else {
     status = "status=0";

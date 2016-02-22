@@ -93,8 +93,9 @@ else
   fi
 fi
 
-sleep 20
+sleep 30
 
 #inciar el script de scaneo para escribir en BD
+clear
 echo "iniciando scaneo"
 source /home/user/contiki/examples/er-rest/scan.sh

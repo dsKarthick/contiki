@@ -9,6 +9,7 @@
   <simulation>
     <title>REST with RPL router</title>
     <randomseed>123456</randomseed>
+    <speedlimit>1.0</speedlimit>
     <motedelay_us>1000000</motedelay_us>
     <radiomedium>
       se.sics.cooja.radiomediums.UDGM
@@ -509,15 +510,6 @@
     <minimized>true</minimized>
   </plugin>
   <plugin>
-    SerialSocketServer
-    <mote_arg>0</mote_arg>
-    <width>422</width>
-    <z>2</z>
-    <height>74</height>
-    <location_x>764</location_x>
-    <location_y>156</location_y>
-  </plugin>
-  <plugin>
     se.sics.cooja.plugins.MoteInterfaceViewer
     <mote_arg>1</mote_arg>
     <plugin_config>
@@ -570,9 +562,9 @@
       <active>true</active>
     </plugin_config>
     <width>600</width>
-    <z>2</z>
+    <z>-4</z>
     <height>385</height>
-    <location_x>266</location_x>
+    <location_x>o</location_x>
     <location_y>0</location_y>
     <minimized>false</minimized>
   </plugin>
