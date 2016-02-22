@@ -1,8 +1,0 @@
-Orden del script de inicializacion
-
-- eliminar los logs de simulacion
-- inicilizar la simulacion 1
-- inicilizar la simulacion 2
-- inicilizar la simulacion 3
-- conectar el rooter a cooja
-- inciar el script de scaneo para escribir en BD
