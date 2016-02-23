@@ -14,10 +14,10 @@ EOF
 
 $(init_db)
 
-LOG_FILES="/home/user/contiki/examples/er-rest/client*"
+LOG_FILE="/home/user/contiki/examples/er-rest/client.log"
 
 # leemos el archivo en tiempo real
-tail -f $LOG_FILES | \
+tail -f $LOG_FILE | \
 while read line ; do
   # buscamos la linea que contiene INFO|
   echo "$line" | grep "INFO|"
