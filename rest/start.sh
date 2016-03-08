@@ -32,4 +32,8 @@ else
 fi
 
 echo "conectando router"
-$cmd_connect &y
+$cmd_connect &
+
+sleep 5
+
+clear
