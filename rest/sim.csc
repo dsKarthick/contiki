@@ -25,9 +25,9 @@
       se.sics.cooja.mspmote.SkyMoteType
       <identifier>server</identifier>
       <description>Rest Server</description>
-      <source EXPORT="discard">[CONTIKI_DIR]/examples/er-rest-new/rest-server.c</source>
+      <source EXPORT="discard">[CONTIKI_DIR]/examples/rest/rest-server.c</source>
       <commands EXPORT="discard">make rest-server.sky TARGET=sky</commands>
-      <firmware EXPORT="copy">[CONTIKI_DIR]/examples/er-rest-new/rest-server.sky</firmware>
+      <firmware EXPORT="copy">[CONTIKI_DIR]/examples/rest/rest-server.sky</firmware>
       <moteinterface>se.sics.cooja.interfaces.Position</moteinterface>
       <moteinterface>se.sics.cooja.interfaces.RimeAddress</moteinterface>
       <moteinterface>se.sics.cooja.interfaces.IPAddress</moteinterface>
@@ -448,7 +448,7 @@
       <filter />
       <formatted_time />
       <coloring />
-      <append>[CONTIKI_DIR]/examples/er-rest-new/client.log</append>
+      <append>[CONTIKI_DIR]/examples/rest/client.log</append>
     </plugin_config>
     <width>762</width>
     <z>1</z>
