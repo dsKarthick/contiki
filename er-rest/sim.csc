@@ -46,29 +46,6 @@
     </motetype>
     <motetype>
       se.sics.cooja.mspmote.SkyMoteType
-      <identifier>rplroot</identifier>
-      <description>Sky RPL Root</description>
-      <source EXPORT="discard">[CONTIKI_DIR]/examples/ipv6/rpl-border-router/border-router.c</source>
-      <commands EXPORT="discard">make border-router.sky TARGET=sky</commands>
-      <firmware EXPORT="copy">[CONTIKI_DIR]/examples/ipv6/rpl-border-router/border-router.sky</firmware>
-      <moteinterface>se.sics.cooja.interfaces.Position</moteinterface>
-      <moteinterface>se.sics.cooja.interfaces.RimeAddress</moteinterface>
-      <moteinterface>se.sics.cooja.interfaces.IPAddress</moteinterface>
-      <moteinterface>se.sics.cooja.interfaces.Mote2MoteRelations</moteinterface>
-      <moteinterface>se.sics.cooja.interfaces.MoteAttributes</moteinterface>
-      <moteinterface>se.sics.cooja.mspmote.interfaces.MspClock</moteinterface>
-      <moteinterface>se.sics.cooja.mspmote.interfaces.MspMoteID</moteinterface>
-      <moteinterface>se.sics.cooja.mspmote.interfaces.SkyButton</moteinterface>
-      <moteinterface>se.sics.cooja.mspmote.interfaces.SkyFlash</moteinterface>
-      <moteinterface>se.sics.cooja.mspmote.interfaces.SkyCoffeeFilesystem</moteinterface>
-      <moteinterface>se.sics.cooja.mspmote.interfaces.Msp802154Radio</moteinterface>
-      <moteinterface>se.sics.cooja.mspmote.interfaces.MspSerial</moteinterface>
-      <moteinterface>se.sics.cooja.mspmote.interfaces.SkyLED</moteinterface>
-      <moteinterface>se.sics.cooja.mspmote.interfaces.MspDebugOutput</moteinterface>
-      <moteinterface>se.sics.cooja.mspmote.interfaces.SkyTemperature</moteinterface>
-    </motetype>
-    <motetype>
-      se.sics.cooja.mspmote.SkyMoteType
       <identifier>client1</identifier>
       <description>Erbium Client 1</description>
       <source EXPORT="discard">[CONTIKI_DIR]/examples/er-rest/er-client1.c</source>
@@ -141,26 +118,12 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>37.0</x>
-        <y>52.0</y>
-        <z>0.0</z>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>1</id>
-      </interface_config>
-      <motetype_identifier>rplroot</motetype_identifier>
-    </mote>
-    <mote>
-      <breakpoints />
-      <interface_config>
-        se.sics.cooja.interfaces.Position
-        <x>37.0</x>
         <y>43.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>2</id>
+        <id>1</id>
       </interface_config>
       <motetype_identifier>client1</motetype_identifier>
     </mote>
@@ -174,7 +137,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>3</id>
+        <id>2</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -188,7 +151,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>4</id>
+        <id>3</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -202,7 +165,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>5</id>
+        <id>4</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -216,7 +179,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>6</id>
+        <id>5</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -230,7 +193,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>7</id>
+        <id>6</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -244,7 +207,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>8</id>
+        <id>7</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -258,7 +221,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>9</id>
+        <id>8</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -272,7 +235,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>10</id>
+        <id>9</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -286,7 +249,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>11</id>
+        <id>10</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -300,7 +263,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>12</id>
+        <id>11</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -314,7 +277,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>13</id>
+        <id>12</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -328,7 +291,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>14</id>
+        <id>13</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -342,7 +305,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>15</id>
+        <id>14</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -356,7 +319,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>16</id>
+        <id>15</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -365,6 +328,20 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>58.0</x>
+        <y>22.0</y>
+        <z>0.0</z>
+      </interface_config>
+      <interface_config>
+        se.sics.cooja.mspmote.interfaces.MspMoteID
+        <id>16</id>
+      </interface_config>
+      <motetype_identifier>server</motetype_identifier>
+    </mote>
+    <mote>
+      <breakpoints />
+      <interface_config>
+        se.sics.cooja.interfaces.Position
+        <x>64.0</x>
         <y>22.0</y>
         <z>0.0</z>
       </interface_config>
@@ -379,7 +356,7 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>64.0</x>
-        <y>22.0</y>
+        <y>28.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -393,7 +370,7 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>64.0</x>
-        <y>28.0</y>
+        <y>34.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -407,7 +384,7 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>64.0</x>
-        <y>34.0</y>
+        <y>40.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -421,7 +398,7 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>64.0</x>
-        <y>40.0</y>
+        <y>46.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -435,7 +412,7 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>64.0</x>
-        <y>46.0</y>
+        <y>52.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -449,7 +426,7 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>64.0</x>
-        <y>52.0</y>
+        <y>58.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -463,7 +440,7 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>64.0</x>
-        <y>58.0</y>
+        <y>64.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -477,7 +454,7 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>64.0</x>
-        <y>64.0</y>
+        <y>70.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -486,35 +463,7 @@
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
-    <mote>
-      <breakpoints />
-      <interface_config>
-        se.sics.cooja.interfaces.Position
-        <x>64.0</x>
-        <y>70.0</y>
-        <z>0.0</z>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>26</id>
-      </interface_config>
-      <motetype_identifier>server</motetype_identifier>
-    </mote>
 
-    <mote>
-      <breakpoints />
-      <interface_config>
-        se.sics.cooja.interfaces.Position
-        <x>127.0</x>
-        <y>52.0</y>
-        <z>0.0</z>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>31</id>
-      </interface_config>
-      <motetype_identifier>rplroot</motetype_identifier>
-    </mote>
     <mote>
       <breakpoints />
       <interface_config>
@@ -525,7 +474,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>32</id>
+        <id>31</id>
       </interface_config>
       <motetype_identifier>client2</motetype_identifier>
     </mote>
@@ -539,7 +488,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>33</id>
+        <id>32</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -553,7 +502,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>34</id>
+        <id>33</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -567,7 +516,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>35</id>
+        <id>34</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -581,7 +530,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>36</id>
+        <id>35</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -595,7 +544,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>37</id>
+        <id>36</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -609,7 +558,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>38</id>
+        <id>37</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -623,7 +572,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>39</id>
+        <id>38</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -637,7 +586,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>40</id>
+        <id>39</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -651,7 +600,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>41</id>
+        <id>40</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -665,7 +614,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>42</id>
+        <id>41</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -679,7 +628,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>43</id>
+        <id>42</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -693,7 +642,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>44</id>
+        <id>43</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -707,7 +656,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>45</id>
+        <id>44</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -721,7 +670,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>46</id>
+        <id>45</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -730,6 +679,20 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>148.0</x>
+        <y>22.0</y>
+        <z>0.0</z>
+      </interface_config>
+      <interface_config>
+        se.sics.cooja.mspmote.interfaces.MspMoteID
+        <id>46</id>
+      </interface_config>
+      <motetype_identifier>server</motetype_identifier>
+    </mote>
+    <mote>
+      <breakpoints />
+      <interface_config>
+        se.sics.cooja.interfaces.Position
+        <x>154.0</x>
         <y>22.0</y>
         <z>0.0</z>
       </interface_config>
@@ -744,7 +707,7 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>154.0</x>
-        <y>22.0</y>
+        <y>28.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -758,7 +721,7 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>154.0</x>
-        <y>28.0</y>
+        <y>34.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -772,7 +735,7 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>154.0</x>
-        <y>34.0</y>
+        <y>40.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -786,7 +749,7 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>154.0</x>
-        <y>40.0</y>
+        <y>46.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -800,7 +763,7 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>154.0</x>
-        <y>46.0</y>
+        <y>52.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -814,7 +777,7 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>154.0</x>
-        <y>52.0</y>
+        <y>58.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -828,7 +791,7 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>154.0</x>
-        <y>58.0</y>
+        <y>64.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -842,7 +805,7 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>154.0</x>
-        <y>64.0</y>
+        <y>70.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -851,35 +814,7 @@
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
-    <mote>
-      <breakpoints />
-      <interface_config>
-        se.sics.cooja.interfaces.Position
-        <x>154.0</x>
-        <y>70.0</y>
-        <z>0.0</z>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>56</id>
-      </interface_config>
-      <motetype_identifier>server</motetype_identifier>
-    </mote>
 
-    <mote>
-      <breakpoints />
-      <interface_config>
-        se.sics.cooja.interfaces.Position
-        <x>217.0</x>
-        <y>52.0</y>
-        <z>0.0</z>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>61</id>
-      </interface_config>
-      <motetype_identifier>rplroot</motetype_identifier>
-    </mote>
     <mote>
       <breakpoints />
       <interface_config>
@@ -890,7 +825,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>62</id>
+        <id>61</id>
       </interface_config>
       <motetype_identifier>client3</motetype_identifier>
     </mote>
@@ -904,7 +839,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>63</id>
+        <id>62</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -918,7 +853,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>64</id>
+        <id>63</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -932,7 +867,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>65</id>
+        <id>64</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -946,7 +881,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>66</id>
+        <id>65</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -960,7 +895,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>67</id>
+        <id>66</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -974,7 +909,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>68</id>
+        <id>67</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -988,7 +923,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>69</id>
+        <id>68</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -1002,7 +937,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>70</id>
+        <id>69</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -1016,7 +951,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>71</id>
+        <id>70</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -1030,7 +965,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>72</id>
+        <id>71</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -1044,7 +979,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>73</id>
+        <id>72</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -1058,7 +993,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>74</id>
+        <id>73</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -1072,7 +1007,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>75</id>
+        <id>74</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -1086,7 +1021,7 @@
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>76</id>
+        <id>75</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>
@@ -1095,6 +1030,20 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>238.0</x>
+        <y>22.0</y>
+        <z>0.0</z>
+      </interface_config>
+      <interface_config>
+        se.sics.cooja.mspmote.interfaces.MspMoteID
+        <id>76</id>
+      </interface_config>
+      <motetype_identifier>server</motetype_identifier>
+    </mote>
+    <mote>
+      <breakpoints />
+      <interface_config>
+        se.sics.cooja.interfaces.Position
+        <x>244.0</x>
         <y>22.0</y>
         <z>0.0</z>
       </interface_config>
@@ -1109,7 +1058,7 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>244.0</x>
-        <y>22.0</y>
+        <y>28.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -1123,7 +1072,7 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>244.0</x>
-        <y>28.0</y>
+        <y>34.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -1137,7 +1086,7 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>244.0</x>
-        <y>34.0</y>
+        <y>40.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -1151,7 +1100,7 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>244.0</x>
-        <y>40.0</y>
+        <y>46.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -1165,7 +1114,7 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>244.0</x>
-        <y>46.0</y>
+        <y>52.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -1179,7 +1128,7 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>244.0</x>
-        <y>52.0</y>
+        <y>58.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -1193,7 +1142,7 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>244.0</x>
-        <y>58.0</y>
+        <y>64.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -1207,26 +1156,12 @@
       <interface_config>
         se.sics.cooja.interfaces.Position
         <x>244.0</x>
-        <y>64.0</y>
-        <z>0.0</z>
-      </interface_config>
-      <interface_config>
-        se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>85</id>
-      </interface_config>
-      <motetype_identifier>server</motetype_identifier>
-    </mote>
-    <mote>
-      <breakpoints />
-      <interface_config>
-        se.sics.cooja.interfaces.Position
-        <x>244.0</x>
         <y>70.0</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
         se.sics.cooja.mspmote.interfaces.MspMoteID
-        <id>86</id>
+        <id>85</id>
       </interface_config>
       <motetype_identifier>server</motetype_identifier>
     </mote>

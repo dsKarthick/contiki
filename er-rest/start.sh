@@ -1,12 +1,11 @@
 #!/bin/bash
-GUI=0
+GUI=1
 
 LOG_FILE="/home/user/contiki/examples/er-rest/client.log"
 
 cmd_clean="make clean"
 cmd_make="make TARGET=cooja sim.csc"
 cmd_make_nogui="java -mx512m -jar /home/user/contiki/tools/cooja/dist/cooja.jar -nogui=/home/user/contiki/examples/er-rest/sim.csc -contiki=/home/user/contiki"
-cmd_connect="echo user | sudo -S make connect-router-cooja"
 
 # eliminar los logs de simulacion
 echo "eliminando el log de simulacion"
@@ -35,11 +34,6 @@ else
     mv COOJA.testlog "/home/user/contiki/examples/er-rest/client.log"
   fi
 fi
-
-echo "conectando router"
-$cmd_connect &
-
-sleep 20
 
 #inciar el script de scaneo para escribir en BD
 clear
