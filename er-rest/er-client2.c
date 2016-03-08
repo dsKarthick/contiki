@@ -92,7 +92,7 @@ PROCESS_THREAD(loop_client, ev, data)
   uip_ip6addr(&server_ipaddrs[22], 0xfe80, 0, 0, 0, 0x0212, 0x7436, 0x0036, 0x3636);
   uip_ip6addr(&server_ipaddrs[23], 0xfe80, 0, 0, 0, 0x0212, 0x7437, 0x0037, 0x3737);
 
-  etimer_set(&et, 2*CLOCK_SECOND);
+  etimer_set(&et, 3*CLOCK_SECOND);
 
   while(1) {
     PROCESS_WAIT_EVENT_UNTIL(ev == PROCESS_EVENT_TIMER);
