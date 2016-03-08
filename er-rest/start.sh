@@ -1,5 +1,5 @@
 #!/bin/bash
-GUI=1
+GUI=0
 
 LOG_FILE="/home/user/contiki/examples/er-rest/client.log"
 

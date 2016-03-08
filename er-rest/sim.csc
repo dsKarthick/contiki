@@ -1230,7 +1230,7 @@
 
         /* Conf. */
         booted = new Array();
-        nrNodes = 26;
+        nrNodes = 25;
         nodes_starting = true;
 
         for(i = 1; i &lt;= nrNodes; i++) {
