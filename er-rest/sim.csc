@@ -46,6 +46,29 @@
     </motetype>
     <motetype>
       se.sics.cooja.mspmote.SkyMoteType
+      <identifier>server-p</identifier>
+      <description>Erbium Server</description>
+      <source EXPORT="discard">[CONTIKI_DIR]/examples/er-rest/er-server-p.c</source>
+      <commands EXPORT="discard">make er-server-p.sky TARGET=sky</commands>
+      <firmware EXPORT="copy">[CONTIKI_DIR]/examples/er-rest/er-server-p.sky</firmware>
+      <moteinterface>se.sics.cooja.interfaces.Position</moteinterface>
+      <moteinterface>se.sics.cooja.interfaces.RimeAddress</moteinterface>
+      <moteinterface>se.sics.cooja.interfaces.IPAddress</moteinterface>
+      <moteinterface>se.sics.cooja.interfaces.Mote2MoteRelations</moteinterface>
+      <moteinterface>se.sics.cooja.interfaces.MoteAttributes</moteinterface>
+      <moteinterface>se.sics.cooja.mspmote.interfaces.MspClock</moteinterface>
+      <moteinterface>se.sics.cooja.mspmote.interfaces.MspMoteID</moteinterface>
+      <moteinterface>se.sics.cooja.mspmote.interfaces.SkyButton</moteinterface>
+      <moteinterface>se.sics.cooja.mspmote.interfaces.SkyFlash</moteinterface>
+      <moteinterface>se.sics.cooja.mspmote.interfaces.SkyCoffeeFilesystem</moteinterface>
+      <moteinterface>se.sics.cooja.mspmote.interfaces.Msp802154Radio</moteinterface>
+      <moteinterface>se.sics.cooja.mspmote.interfaces.MspSerial</moteinterface>
+      <moteinterface>se.sics.cooja.mspmote.interfaces.SkyLED</moteinterface>
+      <moteinterface>se.sics.cooja.mspmote.interfaces.MspDebugOutput</moteinterface>
+      <moteinterface>se.sics.cooja.mspmote.interfaces.SkyTemperature</moteinterface>
+    </motetype>
+    <motetype>
+      se.sics.cooja.mspmote.SkyMoteType
       <identifier>client1</identifier>
       <description>Erbium Client 1</description>
       <source EXPORT="discard">[CONTIKI_DIR]/examples/er-rest/er-client1.c</source>
@@ -742,7 +765,7 @@
         se.sics.cooja.mspmote.interfaces.MspMoteID
         <id>50</id>
       </interface_config>
-      <motetype_identifier>server</motetype_identifier>
+      <motetype_identifier>server-p</motetype_identifier>
     </mote>
     <mote>
       <breakpoints />

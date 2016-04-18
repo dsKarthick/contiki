@@ -1,4 +1,4 @@
-all: er-server er-client1 er-client2 er-client3
+all: er-server er-server-p er-client1 er-client2 er-client3
 # use this target explicitly if requried: er-plugtest-server
 
 
